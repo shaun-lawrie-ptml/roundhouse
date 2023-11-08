@@ -1,3 +1,12 @@
+> **Warning**
+> This uses keywords.txt extracted from the 8.0.16 version of MySql.Data because this resource no longer exists in the newer versions but it was required for ILMerge. If there resource doesn't exist in the new version it's assumed that there is no reference to it so this doesn't cause any damage, it just includes it in one of the output dlls.
+> This was built with the following command:
+> ```cmd
+> dotnet publish product/roundhouse.console -p:NoPackageAnalysis=true
+>   -p:TargetFramework=netcoreapp3.1 -p:Version="1.3.1.1" -p:Configuration=Build
+>   -p:Platform="Any CPU"
+> ```
+
 Project RoundhousE - Database Change Management done right
 =======
 <a href=https://ci.appveyor.com/project/chucknorris/roundhouse>
